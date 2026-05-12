@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Финансовый помощник</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <div class="container">
+
+    <h1>💰 Финансовый помощник</h1>
+
+    <input type="number" id="money" placeholder="Введите сумму">
+
+    <button onclick="calculateMoney()">
+      Рассчитать
+    </button>
+
+    <div class="card">
+      <h2>🏠 Обязательные расходы</h2>
+      <p id="needs">0 ₸</p>
+    </div>
+
+    <div class="card">
+      <h2>🎮 Развлечения</h2>
+      <p id="fun">0 ₸</p>
+    </div>
+
+    <div class="card">
+      <h2>💳 Накопления</h2>
+      <p id="save">0 ₸</p>
+    </div>
+
+  </div>
+
+  <script>
+
+    function calculateMoney(){
+
+      let money = document.getElementById("money").value;
+
+      let needs = money * 0.50;
+      let fun = money * 0.30;
+      let save = money * 0.20;
+
+      document.getElementById("needs").innerHTML =
+      needs + " ₸";
+
+      document.getElementById("fun").innerHTML =
+      fun + " ₸";
+
+      document.getElementById("save").innerHTML =
+      save + " ₸";
+
+    }
+
+  </script>
+
+</body>
+</html>
